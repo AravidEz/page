@@ -29,14 +29,20 @@
         .hero h1 {
             font-size: 2.5rem;
             color: #444;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
         }
         .hero p {
             font-size: 1.2rem;
             margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
         .btn-primary {
             background-color: #f5a623;
             border: none;
+            opacity: 0;
+            animation: fadeIn 2.5s forwards;
         }
         .btn-primary:hover {
             background-color: #e5941a;
@@ -57,12 +63,27 @@
             border: none;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .projects .card:hover {
+            transform: scale(1);
         }
         footer {
             background-color: #444;
             color: #fff;
             text-align: center;
             padding: 20px 0;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -86,7 +107,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>&iexcl;Hola! Soy [Tu Nombre]</h1>
+        <h1>&iexcl;Hola! Soy Aravid</h1>
         <p>Desarrollador(a) en proceso, aprendiendo y creando soluciones con pasi&oacute;n.</p>
         <button class="btn btn-primary btn-lg">Descubre m&aacute;s</button>
     </section>
