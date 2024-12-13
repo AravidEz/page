@@ -1,64 +1,150 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
+        /* Estilos generales */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            color: #333;
         }
         header {
+            background-color: #f8ecd4;
+            padding: 20px 0;
+        }
+        header .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #444;
+        }
+        .hero {
+            background-color: #fdf6e3;
+            padding: 60px 20px;
             text-align: center;
-            padding: 20px;
-            background-color: #82b1ff;
-            color: white;
         }
-        header h1 {
-            font-size: 3em;
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #444;
         }
-        section {
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            max-width: 800px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
         }
-        section h2 {
-            color: #555;
+        .btn-primary {
+            background-color: #f5a623;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #e5941a;
+        }
+        .about {
+            background-color: #f8f4ed;
+            padding: 40px 20px;
+        }
+        .about img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .projects {
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        .projects .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         footer {
+            background-color: #444;
+            color: #fff;
             text-align: center;
-            padding: 10px;
-            background-color: #82b1ff;
-            color: white;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
-        <h1>¡Bienvenido a Mi Portafolio!</h1>
-        <p>Proyectos, aprendizajes y sueños.</p>
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre M&iacute;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <section>
-        <h2>Sobre Mí</h2>
-        <p>Soy un estudiante apasionado por la programación y siempre estoy buscando aprender algo nuevo.</p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>&iexcl;Hola! Soy [Tu Nombre]</h1>
+        <p>Desarrollador(a) en proceso, aprendiendo y creando soluciones con pasi&oacute;n.</p>
+        <button class="btn btn-primary btn-lg">Descubre m&aacute;s</button>
     </section>
-    <section>
-        <h2>Proyectos</h2>
-        <ul>
-            <li><strong>Ordenamiento de Nombres</strong>: Un programa en C que ordena una lista de nombres alfabéticamente.</li>
-            <li><strong>Calculadora Básica</strong>: Un programa que realiza operaciones matemáticas simples.</li>
-        </ul>
+
+    <!-- Sobre Mí -->
+    <section class="about container" id="about">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Sobre M&iacute;</h2>
+                <p>Soy estudiante de programaci&oacute;n, apasionado(a) por resolver problemas y aprender cosas nuevas. Mi meta es crear aplicaciones que marquen una diferencia.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/500" alt="Imagen Sobre M&iacute;">
+            </div>
+        </div>
     </section>
+
+    <!-- Proyectos -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-4">Mis Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Una breve descripci&oacute;n de mi proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Otra breve descripci&oacute;n de mi proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Una m&aacute;s breve descripci&oacute;n de mi proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
-        <p>Gracias por visitar. <a href="https://github.com/AravidEz" target="_blank" style="color: #ffd740;">Mi GitHub</a></p>
+        <p>© 2024 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
